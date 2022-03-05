@@ -3,30 +3,119 @@ import Bleed from 'nextra-theme-docs/bleed'
 
 # MDX Component
 
-With Nextra, all your `.md` and `.mdx` files under the pages directory will be rendered with [MDX](https://mdxjs.com/about), it's an
-advanced Markdown format with React component support.
-
 ## Heading
 
+```markdown
+# **Hello**, This Is a _Title_ Inside `h1`
+```
 # **Hello**, This Is a _Title_ Inside `h1`
 
+```html
+<h2>**Hello**, This Is a _Title_ Inside `h2`</h2>
+{/* using html tag to avoid being rendered in the sidebar */}
+```
 <h2>**Hello**, This Is a _Title_ Inside `h2`</h2>
 {/* using html tag to avoid being rendered in the sidebar */}
 
+```markdown
+### **Hello**, This Is a _Title_ Inside `h3`
+```
 ### **Hello**, This Is a _Title_ Inside `h3`
 
+```markdown
+#### **Hello**, This Is a _Title_ Inside `h4`
+```
 #### **Hello**, This Is a _Title_ Inside `h4`
 
+```markdown
+##### **Hello**, This Is a _Title_ Inside `h5`
+```
 ##### **Hello**, This Is a _Title_ Inside `h5`
 
+```markdown
 ###### **Hello**, This Is a _Title_ Inside `h6`
+```
+###### **Hello**, This Is a _Title_ Inside `h6`
+
+## Text
+
+```markdown
+With Nextra, all your `.md` and `.mdx` files under the pages directory will be rendered with [MDX](https://mdxjs.com/about), it's an
+advanced Markdown format with React component support.
+```
+With Nextra, all your `.md` and `.mdx` files under the pages directory will be rendered with [MDX](https://mdxjs.com/about), it's an
+advanced Markdown format with React component support.
+
+## Text Variant
+
+```markdown
+**bold**
+```
+**bold**
+
+```markdown
+***italicized bold***
+```
+***italicized bold***
+
+```markdown
+*italicized*
+```
+*italicized*
+
+```markdown
+~~strikethrough.~~
+```
+~~strikethrough.~~
+
+## Emoji ⛺
+
+[Emoji Docs](https://emojipedia.org/) 😂
+
+## Line Separator
+
+```markdown
+---
+```
+---
+
+## Image 
+
+**External URL :**
+```markdown
+![Image External](https://source.unsplash.com/eaxwP9J_V6s/600x300)
+```
+![Image External](https://source.unsplash.com/eaxwP9J_V6s/600x300)
+
+**Static Image URL :**
+```markdown
+![Image External](../public/photo.jpg)
+```
+![Image External](../public/photo.jpg)
+
+## Link
+
+```markdown
+[MDX](https://mdxjs.com/about), it's an link
+```
+[MDX](https://mdxjs.com/about), it's an link
 
 ## List
 
+```markdown
+1. one
+2. two
+3. three
+```
 1. one
 2. two
 3. three
 
+```markdown
+- one
+- two
+- three
+```
 - one
 - two
 - three
@@ -39,11 +128,19 @@ advanced Markdown format with React component support.
 - [ ] Contact the media
 ```
 
-Renders
-
 - [x] Write the press release
 - [ ] Update the website
 - [ ] Contact the media
+
+## Custom div
+```html
+<div className="p-4 border border-gray-200 dark:border-gray-900 rounded mt-6">
+  Stars on GitHub!
+</div>
+```
+<div className="p-4 border border-gray-200 dark:border-gray-900 rounded mt-6">
+  Stars on GitHub!
+</div>
 
 ## Syntax Highlighting
 
@@ -91,16 +188,33 @@ function Profile() {
 
 ## Inline Code
 
+```markdown
+You can use \`content\` to wrap inline code content like: `let x = 1`.
+```
 You can use \`content\` to wrap inline code content like: `let x = 1`.
 
 ## Blockquote
 
+```markdown
+> Where some people measure progress in answers-right per test or tests-passed per year, we are more interested in Sistine-Chapel-Ceilings per Lifetime.
+>
+> — Alan Kay, A Personal Computer for Children of All Ages
+```
 > Where some people measure progress in answers-right per test or tests-passed per year, we are more interested in Sistine-Chapel-Ceilings per Lifetime.
 >
 > — Alan Kay, A Personal Computer for Children of All Ages
 
 Nested quotes:
 
+```markdown
+> > Where some people measure progress in answers-right per test or tests-passed per year, we are more interested in Sistine-Chapel-Ceilings per Lifetime.
+> >
+> > — Alan Kay, A Personal Computer for Children of All Ages
+>
+> This is **great**.
+>
+> — Shu Ding.
+```
 > > Where some people measure progress in answers-right per test or tests-passed per year, we are more interested in Sistine-Chapel-Ceilings per Lifetime.
 > >
 > > — Alan Kay, A Personal Computer for Children of All Ages
@@ -111,6 +225,13 @@ Nested quotes:
 
 ## Table
 
+```jsx
+| Syntax        | Description |   Test Text |
+| :------------ | :---------: | ----------: |
+| Header        |    Title    | Here's this |
+| Paragraph     |    Text     |    And more |
+| Strikethrough |             |    ~~Text~~ |
+```
 | Syntax        | Description |   Test Text |
 | :------------ | :---------: | ----------: |
 | Header        |    Title    | Here's this |
@@ -121,10 +242,54 @@ Nested quotes:
 
 React components and Markdown can be **mixed together**, for instance:
 
+### Default
+
+<Callout emoji="👾">
+  **Space Invaders** is a 1978 shoot 'em up arcade game developed by Tomohiro
+  Nishikado.
+</Callout>
+
+```mdx
+import Callout from 'nextra-theme-docs/callout'
+
+<Callout emoji="👾">
+  **Space Invaders** is a 1978 shoot 'em up arcade game developed by Tomohiro
+  Nishikado.
+</Callout>
+```
+
+### Warning
+
+<Callout type="warning" emoji="⚠️">
+  This API will be deprecated soon.
+</Callout>
+
+```mdx
+import Callout from 'nextra-theme-docs/callout'
+
+<Callout type="warning" emoji="⚠️">
+  This API will be deprecated soon.
+</Callout>
+```
+
+### Error
+
+<Callout type="error" emoji="🚫">
+  This is a dangerous feature that can cause everything to explode.
+</Callout>
+
+```mdx
+import Callout from 'nextra-theme-docs/callout'
+
+<Callout type="error" emoji="️🚫">
+  This is a dangerous feature that can cause everything to explode.
+</Callout>
+```
+
 ```markdown
-> <Callout>
->   Give [**Nextra**](https://github.com/shuding/nextra) a star!
-> </Callout>
+<Callout>
+  Give [**Nextra**](https://github.com/shuding/nextra) a star!
+</Callout>
 ```
 
 Renders:
@@ -132,6 +297,8 @@ Renders:
 > <Callout>
 >   Give [**Nextra**](https://github.com/shuding/nextra) a star!
 > </Callout>
+
+## Callout
 
 You can use import and use React components inside your Markdown files like this:
 
@@ -159,3 +326,50 @@ Generates:
   tree.
 </Callout>
 </div>
+
+## Bleed
+
+`import Bleed from 'nextra-theme-docs/bleed'`
+
+When wrapping your content with `<Bleed>`, it will be slightly wider than the container
+and will overflow on both sides.
+
+<Bleed>
+  <div style={{ border: '1px solid #888', padding: '4rem 2.5rem', textAlign: 'center' }}>
+    _There is nothing to writing. All you do is sit down at a typewriter and **bleed**._
+
+    — Ernest Hemingway
+
+  </div>
+</Bleed>
+
+It provides a better reading experience when you want to present some graphical information, which normally
+looks nicer in a larger size.
+
+For example you can put text, image, video or any component inside:
+
+<Bleed>
+  <iframe
+    width="100%"
+    height="430"
+    src="https://www.youtube.com/embed/3hccXiXI0u8"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+  />
+</Bleed>
+
+<Bleed>Hey, I can use **Markdown** syntax here.</Bleed>
+
+<Bleed full>
+  ![Landscape](https://source.unsplash.com/eaxwP9J_V6s/1600x398)
+</Bleed>
+
+<Bleed full>
+  <iframe
+    src="https://codesandbox.io/embed/swr-states-4une7"
+    width="100%"
+    height="500px"
+    title="SWR-States"
+  ></iframe>
+</Bleed>
