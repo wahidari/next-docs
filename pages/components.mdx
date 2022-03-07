@@ -1,5 +1,6 @@
 import Callout from 'nextra-theme-docs/callout'
 import Bleed from 'nextra-theme-docs/bleed'
+import Image from 'next/image'
 
 # MDX Component
 
@@ -88,10 +89,24 @@ advanced Markdown format with React component support.
 ![Image External](https://source.unsplash.com/eaxwP9J_V6s/600x300)
 
 **Static Image URL :**
+
+If the `demo.png` file is located at `/public/demo.png`, you can use the code below to display it:
 ```markdown
 ![Image External](../public/demo.png)
 ```
 ![Image External](../public/demo.png)
+
+**Static Next/Image :**
+
+You can use [Next.js Image](https://nextjs.org/docs/basic-features/image-optimization) directly in MDX.
+
+If the `demo.png` file is located at `/public/demo.png`, you can use the code below to display it:
+```markdown
+import Image from 'next/image'
+
+<Image src="/demo.png" alt="Hello" width={500} height={300} />
+```
+<Image src="/demo.png" alt="Hello" width={500} height={300} />
 
 ## Link
 
