@@ -1,41 +1,83 @@
 import Callout from 'nextra-theme-docs/callout'
 import Bleed from 'nextra-theme-docs/bleed'
 import Image from 'next/image'
+import Badge from '@components/Badge'
+import Alert from '@components/Alert'
 
 # MDX Component
+
+## Badge
+
+```js
+import Badge from '@components/Badge'
+
+<Badge>😂 Default</Badge>
+<Badge variant="success">Success</Badge>
+<Badge variant="warning">Warning</Badge>
+<Badge variant="danger">Danger</Badge>
+<Badge variant="dark">Dark</Badge>
+```
+<Badge>😂 Default</Badge>
+<Badge variant="success">Success</Badge>
+<Badge variant="warning">Warning</Badge>
+<Badge variant="danger">Danger</Badge>
+<Badge variant="dark">Dark</Badge>
+
+## Alert
+
+```js
+import Alert from '@components/Alert'
+
+<Alert>😂 Default</Alert>
+<Alert variant="success">Success</Alert>
+<Alert variant="warning">Warning</Alert>
+<Alert variant="danger">Danger</Alert>
+<Alert variant="dark">Dark</Alert>
+```
+<Alert>😂 Default</Alert>
+<Alert variant="success">Success</Alert>
+<Alert variant="warning">Warning</Alert>
+<Alert variant="danger">Danger</Alert>
+<Alert variant="dark">Dark</Alert>
 
 ## Heading
 
 ```markdown
 # **Hello**, This Is a _Title_ Inside `h1`
 ```
+
 # **Hello**, This Is a _Title_ Inside `h1`
 
 ```html
 <h2>**Hello**, This Is a _Title_ Inside `h2`</h2>
 {/* using html tag to avoid being rendered in the sidebar */}
 ```
+
 <h2>**Hello**, This Is a _Title_ Inside `h2`</h2>
 {/* using html tag to avoid being rendered in the sidebar */}
 
 ```markdown
 ### **Hello**, This Is a _Title_ Inside `h3`
 ```
+
 ### **Hello**, This Is a _Title_ Inside `h3`
 
 ```markdown
 #### **Hello**, This Is a _Title_ Inside `h4`
 ```
+
 #### **Hello**, This Is a _Title_ Inside `h4`
 
 ```markdown
 ##### **Hello**, This Is a _Title_ Inside `h5`
 ```
+
 ##### **Hello**, This Is a _Title_ Inside `h5`
 
 ```markdown
 ###### **Hello**, This Is a _Title_ Inside `h6`
 ```
+
 ###### **Hello**, This Is a _Title_ Inside `h6`
 
 ## Text
@@ -44,6 +86,7 @@ import Image from 'next/image'
 With Nextra, all your `.md` and `.mdx` files under the pages directory will be rendered with [MDX](https://mdxjs.com/about), it's an
 advanced Markdown format with React component support.
 ```
+
 With Nextra, all your `.md` and `.mdx` files under the pages directory will be rendered with [MDX](https://mdxjs.com/about), it's an
 advanced Markdown format with React component support.
 
@@ -52,48 +95,59 @@ advanced Markdown format with React component support.
 ```markdown
 **bold**
 ```
+
 **bold**
 
 ```markdown
-***italicized bold***
+**_italicized bold_**
 ```
-***italicized bold***
+
+**_italicized bold_**
 
 ```markdown
-*italicized*
+_italicized_
 ```
-*italicized*
+
+_italicized_
 
 ```markdown
 ~~strikethrough.~~
 ```
+
 ~~strikethrough.~~
 
 ## Emoji ⛺
 
 [Emoji Docs](https://emojipedia.org/) 😂
 
+⚠️ ⛔ ✅ ☑️ ✔️ ❌ 
+
 ## Line Separator
 
 ```markdown
 ---
 ```
+
 ---
 
-## Image 
+## Image
 
 **External URL :**
+
 ```markdown
 ![Image External](https://source.unsplash.com/eaxwP9J_V6s/600x300)
 ```
+
 ![Image External](https://source.unsplash.com/eaxwP9J_V6s/600x300)
 
 **Static Image URL :**
 
 If the `demo.png` file is located at `/public/demo.png`, you can use the code below to display it:
+
 ```markdown
 ![Image External](../public/demo.png)
 ```
+
 ![Image External](../public/demo.png)
 
 **Static Next/Image :**
@@ -101,19 +155,28 @@ If the `demo.png` file is located at `/public/demo.png`, you can use the code be
 You can use [Next.js Image](https://nextjs.org/docs/basic-features/image-optimization) directly in MDX.
 
 If the `demo.png` file is located at `/public/demo.png`, you can use the code below to display it:
+
 ```markdown
 import Image from 'next/image'
 
 <Image src="/demo.png" alt="Hello" width={500} height={300} />
 ```
+
 <Image src="/demo.png" alt="Hello" width={500} height={300} />
 
 ## Link
 
 ```markdown
-[MDX](https://mdxjs.com/about), it's an link
+[MDX](https://mdxjs.com/about), it's an external link
 ```
-[MDX](https://mdxjs.com/about), it's an link
+
+[MDX](https://mdxjs.com/about), it's an external link
+
+```markdown
+[MDX](https://mdxjs.com/about), it's an internal link
+```
+
+[Index](/components), it's an internal link
 
 ## List
 
@@ -122,6 +185,7 @@ import Image from 'next/image'
 2. two
 3. three
 ```
+
 1. one
 2. two
 3. three
@@ -131,6 +195,7 @@ import Image from 'next/image'
 - two
 - three
 ```
+
 - one
 - two
 - three
@@ -148,11 +213,13 @@ import Image from 'next/image'
 - [ ] Contact the media
 
 ## Custom div
+
 ```html
 <div className="p-4 border border-gray-200 dark:border-gray-900 rounded mt-6">
   Stars on GitHub!
 </div>
 ```
+
 <div className="p-4 border border-gray-200 dark:border-gray-900 rounded mt-6">
   Stars on GitHub!
 </div>
@@ -206,6 +273,7 @@ function Profile() {
 ```markdown
 You can use \`content\` to wrap inline code content like: `let x = 1`.
 ```
+
 You can use \`content\` to wrap inline code content like: `let x = 1`.
 
 ## Blockquote
@@ -215,6 +283,7 @@ You can use \`content\` to wrap inline code content like: `let x = 1`.
 >
 > — Alan Kay, A Personal Computer for Children of All Ages
 ```
+
 > Where some people measure progress in answers-right per test or tests-passed per year, we are more interested in Sistine-Chapel-Ceilings per Lifetime.
 >
 > — Alan Kay, A Personal Computer for Children of All Ages
@@ -230,6 +299,7 @@ Nested quotes:
 >
 > — Shu Ding.
 ```
+
 > > Where some people measure progress in answers-right per test or tests-passed per year, we are more interested in Sistine-Chapel-Ceilings per Lifetime.
 > >
 > > — Alan Kay, A Personal Computer for Children of All Ages
@@ -247,6 +317,7 @@ Nested quotes:
 | Paragraph     |    Text     |    And more |
 | Strikethrough |             |    ~~Text~~ |
 ```
+
 | Syntax        | Description |   Test Text |
 | :------------ | :---------: | ----------: |
 | Header        |    Title    | Here's this |
