@@ -29,14 +29,14 @@ import Badge from '@components/Badge'
 import Alert from '@components/Alert'
 
 <Alert>😂 Default</Alert>
-<Alert variant="success">Success</Alert>
-<Alert variant="warning">Warning</Alert>
+<Alert variant="success"><span className="font-semibold">Success !</span> Success message</Alert>
+<Alert variant="warning"><span className="font-bold">Warning !</span> Warning message</Alert>
 <Alert variant="danger">Danger</Alert>
 <Alert variant="dark">Dark</Alert>
 ```
 <Alert>😂 Default</Alert>
-<Alert variant="success">Success</Alert>
-<Alert variant="warning">Warning</Alert>
+<Alert variant="success"><span className="font-semibold">Success !</span> Success message</Alert>
+<Alert variant="warning"><span className="font-bold">Warning !</span> Warning message</Alert>
 <Alert variant="danger">Danger</Alert>
 <Alert variant="dark">Dark</Alert>
 
@@ -324,6 +324,20 @@ Nested quotes:
 | Paragraph     |    Text     |    And more |
 | Strikethrough |             |    ~~Text~~ |
 
+```jsx
+| Syntax                                   | Description |   Test Text |
+| :------------                            | :---------: | ----------: |
+| <Badge>Default</Badge>                   |    Title    | Here's this |
+| <Badge variant="success">Success</Badge> |    Text     |    And more |
+| <Badge variant="danger">Danger</Badge>   |             |    ~~Text~~ |
+```
+
+| Syntax                                   | Description |   Test Text |
+| :------------                            | :---------: | ----------: |
+| <Badge>Default</Badge>                   |    Title    | Here's this |
+| <Badge variant="success">Success</Badge> |    Text     |    And more |
+| <Badge variant="danger">Danger</Badge>   |             |    ~~Text~~ |
+
 ## React Components
 
 React components and Markdown can be **mixed together**, for instance:
@@ -374,14 +388,14 @@ import Callout from 'nextra-theme-docs/callout'
 
 ```markdown
 <Callout>
-  Give [**Nextra**](https://github.com/shuding/nextra) a star!
+  Give [**Next Docs**](https://github.com/wahidari/next-docs) a star!
 </Callout>
 ```
 
 Renders:
 
 > <Callout>
->   Give [**Nextra**](https://github.com/shuding/nextra) a star!
+>   Give [**Next Docs**](https://github.com/wahidari/next-docs) a star!
 > </Callout>
 
 ## Callout
