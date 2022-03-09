@@ -2,7 +2,9 @@ import Callout from 'nextra-theme-docs/callout'
 import Bleed from 'nextra-theme-docs/bleed'
 import Image from 'next/image'
 import Badge from '@components/Badge'
+import BadgeOutline from '@components/BadgeOutline'
 import Alert from '@components/Alert'
+import AlertOutline from '@components/AlertOutline'
 
 # MDX Component
 
@@ -23,6 +25,23 @@ import Badge from '@components/Badge'
 <Badge variant="danger">Danger</Badge>
 <Badge variant="dark">Dark</Badge>
 
+## Badge Outline
+
+```js
+import BadgeOutline from '@components/BadgeOutline'
+
+<BadgeOutline>😂 Default</BadgeOutline>
+<BadgeOutline variant="success">Success</BadgeOutline>
+<BadgeOutline variant="warning">Warning</BadgeOutline>
+<BadgeOutline variant="danger">Danger</BadgeOutline>
+<BadgeOutline variant="dark">Dark</BadgeOutline>
+```
+<BadgeOutline>😂 Default</BadgeOutline>
+<BadgeOutline variant="success">Success</BadgeOutline>
+<BadgeOutline variant="warning">Warning</BadgeOutline>
+<BadgeOutline variant="danger">Danger</BadgeOutline>
+<BadgeOutline variant="dark">Dark</BadgeOutline>
+
 ## Alert
 
 ```js
@@ -39,6 +58,25 @@ import Alert from '@components/Alert'
 <Alert variant="warning"><span className="font-bold">Warning !</span> Warning message</Alert>
 <Alert variant="danger">Danger</Alert>
 <Alert variant="dark">Dark</Alert>
+
+## Alert Outline
+
+```js
+import AlertOutline from '@components/AlertOutline'
+
+<AlertOutline>😂 Default</AlertOutline>
+<AlertOutline variant="success"><span className="font-semibold">Success !</span> Success message</AlertOutline>
+<AlertOutline variant="warning"><span className="font-bold">Warning !</span> Warning message</AlertOutline>
+<AlertOutline variant="danger">Danger</AlertOutline>
+<AlertOutline variant="dark">Dark</AlertOutline>
+```
+<AlertOutline>Dark</AlertOutline>
+<AlertOutline variant="success"><span className="font-semibold">Success !</span> Success message</AlertOutline>
+<AlertOutline variant="warning"><span className="font-bold">Warning !</span> Warning message</AlertOutline>
+<AlertOutline variant="danger">Danger</AlertOutline>
+<AlertOutline variant="dark">Dark</AlertOutline>
+
+
 
 ## Heading
 
