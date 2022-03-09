@@ -2,7 +2,7 @@ export default function Badge({ variant, children }) {
 
   return (
     variant == "success" ?
-      <span className="text-xs font-semibold mr-2 px-2 py-1 rounded bg-emerald-200 text-emerald-600">
+      <span className="text-xs font-semibold mr-2 px-2 py-1 rounded bg-green-200 text-green-600">
         {children}
       </span>
     : variant == "danger" ?

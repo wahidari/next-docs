@@ -2,7 +2,7 @@ export default function Alert({ variant, children }) {
 
   return (
     variant == "success" ?
-      <div className="p-3 font-normal mb-4 text-sm rounded-lg text-emerald-700 dark:text-emerald-800 bg-emerald-200" role="alert">
+      <div className="p-3 font-normal mb-4 text-sm rounded-lg text-green-700 dark:text-green-800 bg-green-200" role="alert">
         {children}
       </div>
     : variant == "danger" ?
