@@ -8,7 +8,7 @@
     "start": "next start",
     "build": "next build"
   },
-  "author": "Next Docs",
+  "author": "wahidari",
   "license": "MIT",
   "dependencies": {
     "next": "^12.0.3",

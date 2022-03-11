@@ -1,10 +1,7 @@
 export default {
-  projectLink: 'https://github.com/wahidari/next-docs', // GitHub link in the navbar
   github: 'https://github.com/wahidari/next-docs',
   docsRepositoryBase: 'https://github.com/wahidari/next-docs/blob/main',
   titleSuffix: ' – Next Docs',
-  floatTOC: true,
-  unstable_flexsearch: true,
   search: true,
   prevLinks: true,
   nextLinks: true,
