@@ -21,7 +21,7 @@ export default function Alert({ variant, children }) {
       <div className="p-3 font-normal mb-4 text-sm rounded-lg text-gray-700 dark:text-gray-800 bg-gray-200" role="alert">
         {children}
       </div>
-    :
+    : 
       <div className="p-3 font-normal mb-4 text-sm rounded-lg text-blue-700 dark:text-blue-800 bg-blue-200" role="alert">
         {children}
       </div>

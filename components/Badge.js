@@ -21,7 +21,7 @@ export default function Badge({ variant, children }) {
       <span className="text-sm font-semibold mr-2 px-2 py-1 rounded bg-gray-200 text-gray-700">
         {children}
       </span>
-    :
+    : 
       <span className="text-sm font-semibold mr-2 px-2 py-1 rounded bg-blue-200 text-blue-600">
         {children}
       </span>
