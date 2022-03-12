@@ -10,7 +10,7 @@ export default function Badge({ variant, children }) {
         {children}
       </span>
     : variant == "warning" ?
-      <span className="text-sm font-semibold mr-2 px-2 py-1 rounded bg-yellow-200 text-yellow-600">
+      <span className="text-sm font-semibold mr-2 px-2 py-1 rounded bg-yellow-200 text-yellow-500">
         {children}
       </span>
     : variant == "info" ?
