@@ -11,6 +11,8 @@
   "author": "wahidari",
   "license": "MIT",
   "dependencies": {
+    "@headlessui/react": "^1.5.0",
+    "@heroicons/react": "^1.0.6",
     "next": "^12.0.3",
     "nextra": "^1.1.0",
     "nextra-theme-docs": "^1.2.6",
