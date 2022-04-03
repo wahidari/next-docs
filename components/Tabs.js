@@ -4,7 +4,7 @@ function classNames(...classes) {
 	return classes.filter(Boolean).join(' ')
 }
 
-export default function Tabs({ tabsA, contentA, tabsB, contentB}) {
+export default function Tabs({ tabsA, contentA, tabsB, contentB }) {
 	return (
 		<div className="w-full pt-4 sm:px-0">
 			<Tab.Group>
